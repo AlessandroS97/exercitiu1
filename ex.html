@@ -1,55 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
+      *{
+        margin: 0px;
+      }
+      .content{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        justify-content: space-around;
+      }
+      .child{
+        flex-grow: 0.4;
+      }
+      @media (max-width: 768px){
+        .content{
+          flex-direction: column;
         }
-        .parent{
-            display: flex;
-            /* position: fixed; */
-            flex-direction: row;
-            justify-content: space-evenly;
-            height: 100vh;
-            width: 100vw;
-        }
-        .child-1{
-            width: 200px;
-            height: 100%;
-            background-color: darkred;
-        }
-        .child-2{
-            width: 200px;
-            height: 100%;
-            background-color: rgb(83, 45, 45);
-        }
-        @media (max-width: 768px){
-            .parent{
-                flex-direction: column;
-                justify-content: space-around;
-            }
-            .child-1{
-                height: 100px;
-                width: 100%;
-                background-color: aqua;
-            }
-            .child-2{
-                height: 100px;
-                width: 100%;
-                background-color: aquamarine;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-    <div class="parent">
-        <div class="child-1"></div>
-        <div class="child-2"></div>
+  </head>
+  <body>
+    <div class="content">
+      <div class="child" style="background-color: darkorange;"></div>
+      <div class="child" style="background-color: darkblue;"></div>
     </div>
-</body>
+  </body>
 </html>
